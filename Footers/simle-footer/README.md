@@ -1,3 +1,3 @@
 # my-components
 alapok
-Simple footer
+A simple footer
