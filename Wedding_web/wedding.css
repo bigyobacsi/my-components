@@ -1,0 +1,315 @@
+* { /*Box-modell*/
+  box-sizing: border-box;
+}
+/*Vertikális tagolás*/
+h1,h2,h3,
+ul,ol,
+p,
+img {  /*24 px alsó margót ad a felsorolt elemeknek*/
+    margin-bottom: 1.5rem; 
+}
+/*====  Alap Formázások   ====*/
+body {/*Háttér*/
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png') repeat center;
+  font-family: 'Libre Baskerville', serif; /*Betűtipus*/
+  font-size: 1.125rem; /*Betűméret*/
+  line-height: 1.5; /*Sormagasság*/
+  color: #444349; /*Betűszin*/
+}
+/*Max szélesség megadása; Margók; Behúzások; Középre igazítás*/
+.locations,
+.program,
+.gifts,
+.faq,
+.contact {
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+h1,
+h2 {
+  font-family: 'Great Vibes', cursive; /*Betűtípus*/
+}
+
+h2 {
+  font-size: 3rem; /*Betűméret*/
+}
+
+h3 {
+  font-size: 1.5rem; /*Betűméret*/
+}
+a {
+  text-decoration: none; /*Link kinézet reset*/
+  color: #bd806e; /*Link szine*/
+}
+
+a:hover { /*Rámutatott állapot*/
+  color: #eda087; /*Szine*/
+  transition: color .15s ease-in-out; /*Rámutatási animáció*/
+}
+/*====   Fejléc formázás   ====*/
+.cover { /*A fejléc háttere --- Ne ismétlődjön középen legyen és borítókép legyen*/
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg') no-repeat 70% center/cover; 
+  display: table; /*Kezelje táblázatként*/
+  text-align: center; /*Középre a tartalat*/
+  height: 100vh; /*magassága (100 %)*/
+  width: 100vw; /*Szélessége 100 %*/
+}
+
+.hero-text-wrapper {
+  display: table-cell; /*Kezelje táblázat-cellaként*/
+  vertical-align: middle; /*Függőlegesen helyezi középre*/
+}
+
+.hero-text {
+  margin: 0 auto; /*Margó*/
+  padding: .625rem; /*Behúzás*/
+  color: hsla(0,0%,100%,.9); /*Betűszin*/
+  background: hsla(100,0%,0%,.5); /*Háttérszin*/
+}
+
+.hero-text h1 { /*Csak a címsorra vonatkozik*/
+  font-size: 3.15rem; /*Betűméret*/
+  color: #d2ba87; /*Szine*/
+  margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
+}
+
+.tagline {
+  font-size: 1.25rem; /*Beűméret*/
+  letter-spacing: .15rem; /*Betű-térköz*/
+}
+
+.tagline::after { /*Elválasztóvonal*/
+  display: block; /*blokszintű legyen*/
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 12.515625rem;
+  margin: .5rem auto;
+}
+/*====    A Fejléc széles kijelzőn     ====*/
+@media (min-width: 768px) {
+
+  .cover { /*Másik háttér*/
+    background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg') no-repeat center/cover;
+  }
+
+}
+@media (min-width: 768px) {
+
+  .hero-text { 
+    padding: 1.25rem; /*Behúzás*/
+    border-radius: 4px; /*Sarkok letörése*/
+    width: 50%; /*Szélesség*/
+  }
+
+  .hero-text h1 { /*Betűméret*/
+    font-size: 7rem;
+  }
+
+}
+@media (min-width: 768px) {
+
+  .tagline {
+    text-transform: uppercase; /*Átalakít nagybetűsre*/
+  }
+
+}
+
+.date {
+  font-size: 1.25rem;
+  letter-spacing: .15rem;
+  vertical-align: middle;
+}
+
+.date::before, /*Gondolatjel a dátumhoz*/
+.date::after {
+  display: inline-block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 .5rem;
+}
+
+
+/*====   Helyszinek formázása   ====*/
+
+
+.blurb img { /*Képek mérete*/
+  height: 7.5rem;
+}
+
+.blurb h3 { /*A 3. címsor Betűvastagság*/
+  font-weight: 700;
+}
+
+.blurb div { /*Betűtípus*/
+  font-family: 'Muli', sans-serif;
+}
+
+
+.blurb::after { /*Elválasztó*/
+  content: "";
+  display: block;
+  height: .1875rem;
+  width: 25vw;
+  margin: 1.5rem auto;
+  background-color: #444349;
+}
+
+/*====   A helyszínek széles kijelzőn   ===*/
+
+@media (min-width: 768px) {
+
+  .blurb {
+    display: inline-block; /*egy sorba legyenek*/
+    width: 30%; /*szélességük*/
+    padding: 1.5rem; /*behúzás*/
+    margin: .5rem; /*margó*/
+  }
+
+  .blurb::after {
+    display: none; /*Az elválasztókat kiveszi*/
+  }
+
+}
+
+/*====   A program stilusai   ====*/
+
+.program {
+  width: 100vw; /*Teljes szélességű legyen (felülírja az előző definíciót)*/
+  text-align: left; /*A szöveget balra*/
+  background: hsla(100,0%,0%,.6); /*A áttere kissé átlátszó*/
+  color: #d2ba87; /*Betűszin*/
+  font-family: 'Muli', sans-serif; /*Betűtipus*/
+}
+
+.program h2 { /*A program fejléce (külön formázva)*/
+  font-family: 'Great Vibes', cursive; /*Betűtipus*/
+  margin-top: 1rem; /*Felső margó, felülírja az előző definíciót*/
+  text-align: center;
+}
+
+.program p {
+  font-style: italic; /*Betűstílus*/
+}
+
+.program ul {
+  letter-spacing: .025rem; /*Betűköz*/
+}
+
+/*====   A program széles kijelzőn   ====*/
+
+@media (min-width: 768px) {
+
+  .program-wrapper {
+    width: 30vw; /*szélessége*/
+    margin: 0 auto; /*margó*/
+  }
+
+}
+
+/*====   Az ajándékok stílusai   ====*/
+
+.gifts img { /*A kép méretezése*/
+  height: 7.5rem
+}
+.gifts p:last-child {   /*Az utolsó praragrafus ulán elveszi az alsó margót*/
+  margin-bottom: 0;
+}
+
+/*====   Gyakori kérdések stílusai   ====*/
+
+.faq {
+  background: hsla(100,0%,0%,.6); /*A áttere kissé átlátszó*/
+  width: 100vw; /*Teljes szélességű legyen (felülírja az előző definíciót)*/
+  color: #d2ba87; /*Betűszin*/
+  text-align: center; /*A szöveget középre*/
+}
+.faq h2 {
+  margin-top: 1rem; /*Felső margó a címsornak*/
+}
+
+.faq p { /*A paragrafusok, betűtípusa igazítása*/
+  font-family: 'Muli', sans-serif;
+  text-align: left;
+}
+
+.question-group::after { /*elválastó*/
+  content: "";
+  display: block;
+  height: .1875rem;
+  width: 50vw;
+  margin: 1.5rem auto;
+  background-color: #d2ba87;
+}
+
+.question { /*A kérdések félkövérek, plusz alsó margó*/
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.answer { /*A válaszok alsó margója*/
+  margin-bottom: 1.5rem;
+}
+
+/*====   Gakori kérdések széles kijelzőn   ====*/
+
+@media (min-width: 768px) {
+
+  .question-group {
+    display: inline-block; /*Egysorba legyenek*/
+    width: 30%; /*szélesség*/
+    vertical-align: top; /*elrendezés*/
+    padding: 1.5rem; /*Behúzás*/
+    margin: .5rem; /*margó*/
+  }
+
+  .question-group::after {
+    display: none; /*elválasztó kivétele*/
+  }
+
+  .question-group h3 {
+    text-align: left; /*szöveg rendezése*/
+  }
+
+}
+/*====   Lábléc stílusa   ====*/
+
+footer { 
+  height: 10vh; /*magassága*/
+  width: 100vw; /*szélessége*/
+  background-color: #606060; /*háttere*/
+  color: #fff; /*Szöveg szine*/
+  font-family: 'Muli', sans-serif; /*betűtípusa*/
+  display: table; /*Táblázatként kezelje*/
+  text-align: center; /*Szöveg középre*/
+  font-size: .875rem; /*Betűméret*/
+}
+
+.footer-wrapper { 
+  display: table-cell; /*Legyen táblázatcelleként kezelve*/
+  vertical-align: middle; /*Függólegesen is középre*/
+  padding: .5rem 1rem; /*Behúzás*/
+}
+
+footer p {
+  margin-bottom: 0; /*Az alsó margó kivétele*/
+}
+
+footer small {
+  line-height: 1.5;
+}
+
+/*====   A lábléc széles kijelzőn   ====*/
+
+@media (min-width: 768px) {
+
+  footer {
+    min-height: 7vh; /*A magassága*/
+  }
+
+}
